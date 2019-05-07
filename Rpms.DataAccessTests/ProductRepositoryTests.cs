@@ -16,7 +16,7 @@ namespace Rpms.DataAccess.Tests
         private readonly IExcelRepository<Product> productRepository;
         public ProductRepositoryTests()
         {
-            productRepository = new ExcelRepository<Product>(@"D:\repos\Rpms\RPMS\bin\Debug\Configuration.xlsx");
+            productRepository = new ExcelRepository<Product>(@"D:\repos\Rpms\RPMS\RPMS\Configuration.xlsx");
         }
 
         [TestMethod()]

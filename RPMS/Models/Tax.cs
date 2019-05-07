@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Rpms.Models
 {
-    public class Note
+    public class Tax
     {
         public Guid ID { get; set; }
-        public string TypeID { get; set; }
-        public string TypeValue { get; set; }
+
+        public string Type { get; set; }
+
+        public decimal Value { get; set; }
 
         public string Status { get; set; }
-
     }
 }

@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rpms.Models
 {
-    public class Note
+    public class DiscountCode
     {
         public Guid ID { get; set; }
-        public string TypeID { get; set; }
-        public string TypeValue { get; set; }
+
+        public string Code { get; set; }
+
+        public DateTime FromDate { get; set; }
+
+        public DateTime TillDate { get; set; }
 
         public string Status { get; set; }
 

@@ -12,6 +12,8 @@ namespace Rpms.Models
         public Guid ProductID { get; set; }
         public string Key { get; set; }
         public string Value { get; set; }
+        public string Status { get; set; }
+
 
     }
 }

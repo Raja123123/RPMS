@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Rpms.Models
 {
-    
-    public class StockOut
+    public class InvoiceProduct
     {
         public Guid ID { get; set; }
+
         public Guid ProductID { get; set; }
-        public Guid InvoiceID { get; set; }
-        public DateTime Date { get; set; }
-        public string Status { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal Mrp { get; set; }
+        public decimal Discount { get; set; }
+        public Guid DiscountCode { get; set; }
 
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Rpms.Models
 {
-    public class Note
+    public class Customer
     {
         public Guid ID { get; set; }
-        public string TypeID { get; set; }
-        public string TypeValue { get; set; }
-
+        public string Name { get; set; }
+        public string MobileNo { get; set; }
+        public string Adderss { get; set; }
         public string Status { get; set; }
 
     }
