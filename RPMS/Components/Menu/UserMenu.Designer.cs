@@ -1,6 +1,6 @@
-﻿namespace Rpms.Components.Products
+﻿namespace Rpms.Components.Menu
 {
-    partial class ManageProduct
+    partial class UserMenu
     {
         /// <summary> 
         /// Required designer variable.

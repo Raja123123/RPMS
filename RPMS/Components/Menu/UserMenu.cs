@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Rpms.Components.Products
+namespace Rpms.Components.Menu
 {
-    public partial class AddUpdateProduct : UserControl
+    public partial class UserMenu : UserControl
     {
-        public AddUpdateProduct()
+        public UserMenu()
         {
             InitializeComponent();
-        }
-
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

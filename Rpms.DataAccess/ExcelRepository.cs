@@ -71,6 +71,59 @@ namespace Rpms.DataAccess
 
             return dataTable.DataTableToList<T>();
         }
+
+
+        public DataTable GetAllDataTable()
+        {
+            DataTable dataTable;
+            using (OleDbConnection conn = new OleDbConnection(ConnectionString))
+            {
+                try
+                {
+                    conn.Open();
+
+                    var allFields = _utility.GetColumns<T>();
+                    var query = $"select {string.Join(",", allFields.Select(d => "[" + d.Value + "]"))} from [{_utility.GetSheetName<T>()}$] order by Entrydate DESC";
+                    OleDbDataAdapter objDA = new System.Data.OleDb.OleDbDataAdapter
+                    (query, conn);
+                    DataSet excelDataSet = new DataSet();
+                    objDA.Fill(excelDataSet);
+                    dataTable = excelDataSet.Tables[0];
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            return dataTable;
+        }
+
+        public DataTable GetSearchDataTable(string key)
+        {
+
+            DataTable dataTable = this.GetAllDataTable();
+            var filteredDataTable = dataTable.Clone();
+            var filteredRow = dataTable
+                .Rows
+                .Cast<DataRow>()
+                .Where(r => r.ItemArray.Any(
+                    c => c.ToString().IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0
+                )).ToArray();
+
+            foreach (DataRow row in filteredRow)
+            {
+                filteredDataTable.ImportRow(row);
+            }
+
+            return filteredDataTable;
+        }
+
+
         public T Add(T entity) {
 
 

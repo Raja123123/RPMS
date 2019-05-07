@@ -15,6 +15,7 @@ namespace Rpms.Models
         public string Code { get; set; }
         public string  Description { get; set; }
         public string Status { get; set; }
+        public DateTime EntryDate { get; set; }
 
     }
 }

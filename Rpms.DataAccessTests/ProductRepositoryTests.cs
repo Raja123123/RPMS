@@ -26,6 +26,13 @@ namespace Rpms.DataAccess.Tests
             Assert.IsNotNull(allData);
         }
 
+
+        [TestMethod()]
+        public void GetSearchDataTableTest()
+        {
+            var allData = productRepository.GetSearchDataTable("");
+            Assert.IsNotNull(allData);
+        }
         [TestMethod()]
         public void FindByIdTest()
         {
