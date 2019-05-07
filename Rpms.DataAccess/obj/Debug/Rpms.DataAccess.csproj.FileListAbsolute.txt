@@ -1,0 +1,12 @@
+D:\repos\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.dll
+D:\repos\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.pdb
+D:\repos\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csprojAssemblyReference.cache
+D:\repos\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csproj.CoreCompileInputs.cache
+D:\repos\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.dll
+D:\repos\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.pdb
+D:\repos\Rpms\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.dll
+D:\repos\Rpms\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.pdb
+D:\repos\Rpms\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csprojAssemblyReference.cache
+D:\repos\Rpms\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csproj.CoreCompileInputs.cache
+D:\repos\Rpms\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.dll
+D:\repos\Rpms\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.pdb
