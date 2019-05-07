@@ -16,3 +16,7 @@ D:\repos\Rpms\RPMS\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csprojAssemblyRefer
 D:\repos\Rpms\RPMS\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csproj.CoreCompileInputs.cache
 D:\repos\Rpms\RPMS\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.dll
 D:\repos\Rpms\RPMS\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.pdb
+D:\homework\GitHub\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.dll
+D:\homework\GitHub\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.pdb
+D:\homework\GitHub\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.dll
+D:\homework\GitHub\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.pdb

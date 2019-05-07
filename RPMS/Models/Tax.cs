@@ -15,5 +15,7 @@ namespace Rpms.Models
         public decimal Value { get; set; }
 
         public string Status { get; set; }
+
+        public DateTime EntryDate { get; set; }
     }
 }

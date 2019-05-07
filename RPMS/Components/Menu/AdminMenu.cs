@@ -34,8 +34,12 @@ namespace Rpms.Components.Menu
             switch (moduleName)
             {
                 case "Product":
-                    var component = new ProductComponent();
-                    pnlModule.Controls.Add(component);
+                    var productComponent = new ProductComponent();
+                    pnlModule.Controls.Add(productComponent);
+                    break;
+                case "Tax":
+                    var taxComponent = new TaxComponent();
+                    pnlModule.Controls.Add(taxComponent);
                     break;
                 default:
                     break;
@@ -44,6 +48,11 @@ namespace Rpms.Components.Menu
 
             var lblTitle = (Label)Parent.Controls.Find("lblModuleTitle", true).FirstOrDefault();
             lblTitle.Text = string.IsNullOrEmpty(title) ? moduleName : title ;
+        }
+
+        private void btnTax_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Tax");
         }
     }
 }

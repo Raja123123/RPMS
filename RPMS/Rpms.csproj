@@ -66,6 +66,13 @@
     <Compile Include="Components\ProductComponent.Designer.cs">
       <DependentUpon>ProductComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\TaxComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\TaxComponent.Designer.cs">
+      <DependentUpon>TaxComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TaxController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ProductComponent.resx">
       <DependentUpon>ProductComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\TaxComponent.resx">
+      <DependentUpon>TaxComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
