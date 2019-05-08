@@ -33,8 +33,8 @@
             this.grdProducts = new System.Windows.Forms.DataGridView();
             this.chkStatus = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtSku = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtValue = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 23;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label6
             // 
@@ -86,19 +87,19 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtSku
+            // txtValue
             // 
-            this.txtSku.Location = new System.Drawing.Point(72, 54);
-            this.txtSku.Name = "txtSku";
-            this.txtSku.Size = new System.Drawing.Size(100, 20);
-            this.txtSku.TabIndex = 16;
+            this.txtValue.Location = new System.Drawing.Point(72, 54);
+            this.txtValue.Name = "txtValue";
+            this.txtValue.Size = new System.Drawing.Size(100, 20);
+            this.txtValue.TabIndex = 16;
             // 
-            // txtName
+            // txtType
             // 
-            this.txtName.Location = new System.Drawing.Point(72, 28);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 18;
+            this.txtType.Location = new System.Drawing.Point(72, 28);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.TabIndex = 18;
             // 
             // label2
             // 
@@ -146,8 +147,8 @@
             this.Controls.Add(this.grdProducts);
             this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtSku);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtValue);
+            this.Controls.Add(this.txtType);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -168,8 +169,8 @@
         private System.Windows.Forms.DataGridView grdProducts;
         private System.Windows.Forms.CheckBox chkStatus;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtSku;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtValue;
+        private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

@@ -48,16 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\Menu\AdminMenu.cs">
+    <Compile Include="Menu\AdminMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\Menu\AdminMenu.Designer.cs">
+    <Compile Include="Menu\AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\Menu\UserMenu.cs">
+    <Compile Include="Menu\UserMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\Menu\UserMenu.Designer.cs">
+    <Compile Include="Menu\UserMenu.Designer.cs">
       <DependentUpon>UserMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\ProductComponent.cs">
@@ -94,7 +94,7 @@
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Components\Menu\AdminMenu.resx">
+    <EmbeddedResource Include="Menu\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ProductComponent.resx">
