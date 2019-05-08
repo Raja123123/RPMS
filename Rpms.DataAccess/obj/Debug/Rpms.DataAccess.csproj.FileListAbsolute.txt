@@ -20,3 +20,4 @@ D:\homework\GitHub\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.dll
 D:\homework\GitHub\Rpms.DataAccess\bin\Debug\Rpms.DataAccess.pdb
 D:\homework\GitHub\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.dll
 D:\homework\GitHub\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.pdb
+D:\homework\GitHub\Rpms.DataAccess\obj\Debug\Rpms.DataAccess.csprojResolveAssemblyReference.cache

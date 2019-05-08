@@ -12,6 +12,10 @@ namespace Rpms.Models
         public int Quantity { get; set; }
         public Guid VendorID { get; set; }
 
+        public Decimal MRP { get; set; }
+
+        public Decimal CostPrice { get; set; }
+
         public DateTime Date { get; set; }
         public string Status { get; set; }
 

@@ -48,6 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\ProductTypeComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProductTypeComponent.Designer.cs">
+      <DependentUpon>ProductTypeComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductTypeController.cs" />
     <Compile Include="Menu\AdminMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +87,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Common\ComboBoxItem.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DiscountCode.cs" />
     <Compile Include="Models\Invoice.cs" />
@@ -94,6 +102,9 @@
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\ProductTypeComponent.resx">
+      <DependentUpon>ProductTypeComponent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>

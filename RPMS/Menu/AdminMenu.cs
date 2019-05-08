@@ -36,10 +36,15 @@ namespace Rpms.Components.Menu
                 case "Product":
                     var productComponent = new ProductComponent();
                     pnlModule.Controls.Add(productComponent);
+                    title = "All Products";
                     break;
                 case "Tax":
                     var taxComponent = new TaxComponent();
                     pnlModule.Controls.Add(taxComponent);
+                    break;
+                case "Product Type":
+                    var productTypeComponent = new ProductTypeComponent();
+                    pnlModule.Controls.Add(productTypeComponent);
                     break;
                 default:
                     break;
@@ -53,6 +58,12 @@ namespace Rpms.Components.Menu
         private void btnTax_Click(object sender, EventArgs e)
         {
             PopulateModule("Tax");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Product Type");
+
         }
     }
 }

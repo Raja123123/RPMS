@@ -25,6 +25,9 @@ namespace Rpms.DataAccess
             {
                 return dnAttribute.Name;
             }
+            else {
+                return typeof(T).Name;
+            }
             return null;
         }
 
@@ -141,6 +144,7 @@ namespace Rpms.DataAccess
 
             return _dict;
         }
+
 
     }
 }

@@ -38,7 +38,7 @@
             // 
             this.btnProduct.Location = new System.Drawing.Point(15, 22);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(75, 23);
+            this.btnProduct.Size = new System.Drawing.Size(131, 23);
             this.btnProduct.TabIndex = 0;
             this.btnProduct.Text = "Product";
             this.btnProduct.UseVisualStyleBackColor = true;
@@ -48,7 +48,7 @@
             // 
             this.btnTax.Location = new System.Drawing.Point(15, 52);
             this.btnTax.Name = "btnTax";
-            this.btnTax.Size = new System.Drawing.Size(75, 23);
+            this.btnTax.Size = new System.Drawing.Size(131, 23);
             this.btnTax.TabIndex = 1;
             this.btnTax.Text = "Tax";
             this.btnTax.UseVisualStyleBackColor = true;
@@ -58,16 +58,17 @@
             // 
             this.button3.Location = new System.Drawing.Point(15, 82);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(131, 23);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Product Type";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(15, 112);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(131, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -81,7 +82,7 @@
             this.Controls.Add(this.btnTax);
             this.Controls.Add(this.btnProduct);
             this.Name = "AdminMenu";
-            this.Size = new System.Drawing.Size(122, 191);
+            this.Size = new System.Drawing.Size(179, 191);
             this.ResumeLayout(false);
 
         }

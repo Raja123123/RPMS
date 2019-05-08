@@ -74,6 +74,7 @@ namespace Rpms.Components
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            grdProducts.DataSource = taxController.GetSearchDataTable(txtSearch.Text);
 
         }
     }
