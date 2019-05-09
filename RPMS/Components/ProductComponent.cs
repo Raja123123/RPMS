@@ -14,10 +14,12 @@ namespace Rpms.Components
 {
     public partial class ProductComponent : UserControl
     {
-        public readonly Guid ProductID;
+        public Guid ProductID;
 
         public readonly ProductController productController;
 
+
+        DataTable dtProducts;
         public ProductComponent()
         {
             InitializeComponent();
@@ -26,20 +28,22 @@ namespace Rpms.Components
         }
 
         private void Bind() {
-            if (ProductID == Guid.Empty)
-            {
-                btnSave.Text = "Add";
-            }
-            grdProducts.DataSource = productController.GetAllDataTable();
+            btnSave.Text = "Add";
+            lblTitle.Text = "Add Product";
+            grdProducts.DataSource = dtProducts =  productController.GetAllDataTable();
         }
         private void PopulateProduct(Guid ID)
         {
             var product = productController.FindById(ID);
             txtName.Text = product.Name;
             txtSku.Text = product.SKU;
+            txtCode.Text = product.Code;
             txtDesc.Text = product.Description;
             chkStatus.Checked = product.Status == "Active" ;
+            ProductID = product.ID;
 
+            lblTitle.Text = "Update Product";
+            btnSave.Text = "Update";
         }
 
        
@@ -60,18 +64,43 @@ namespace Rpms.Components
                     Status = "Active"
                 };
                 productController.Add(product);
+                grdProducts.DataSource = dtProducts = productController.GetAllDataTable();
                 MessageBox.Show("Product Added Sucessfully");
-                grdProducts.DataSource = productController.GetAllDataTable();
+
 
             }
             else {
-
+                var product = new Product
+                {
+                    ID = ProductID,
+                    Code = txtCode.Text,
+                    Description = txtDesc.Text,
+                    Name = txtName.Text,
+                    SKU = txtSku.Text,
+                    EntryDate = DateTime.Now,
+                    Status = "Active"
+                };
+                productController.Update(ProductID, product);
+                grdProducts.DataSource = dtProducts = productController.GetAllDataTable();
+                MessageBox.Show("Product Updated Sucessfully");
             }
         }
 
-        private void TxtSearch_TextChanged(object sender, EventArgs e)
+      
+
+        private void TxtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            grdProducts.DataSource = productController.GetSearchDataTable(txtSearch.Text);
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                //grdProducts.DataSource =((DataTable)grdProducts.DataSource).Find(txtSearch.Text);
+                grdProducts.DataSource = dtProducts.Find(txtSearch.Text);
+                
+            }
+        }
+
+        private void GrdProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           PopulateProduct(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
         }
     }
 }

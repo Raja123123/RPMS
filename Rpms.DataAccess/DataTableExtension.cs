@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 
 
@@ -71,6 +72,33 @@ public static class DataTableExtension
             }
 
             return list;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+
+    public static DataTable Find(this DataTable dataTable, string key, string [] columns = null)
+    {
+        try
+        {
+            var filteredDataTable = dataTable.Clone();
+            var filteredRow = dataTable
+                .Rows
+                .Cast<DataRow>()
+                .Where(r => r.ItemArray.Any(
+                    c => c.ToString().IndexOf(key, StringComparison.OrdinalIgnoreCase) >= 0
+                )).ToArray();
+
+            foreach (DataRow row in filteredRow)
+            {
+                filteredDataTable.ImportRow(row);
+            }
+
+            return filteredDataTable;
+
         }
         catch
         {
