@@ -69,9 +69,16 @@ namespace Rpms.Components
             }
         }
 
-        private void TxtSearch_TextChanged(object sender, EventArgs e)
+      
+
+        private void TxtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            grdProducts.DataSource = productController.GetSearchDataTable(txtSearch.Text);
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                //grdProducts.DataSource =((DataTable)grdProducts.DataSource).Find(txtSearch.Text);
+                grdProducts.DataSource = productController.GetAllDataTable().Find(txtSearch.Text);
+                
+            }
         }
     }
 }

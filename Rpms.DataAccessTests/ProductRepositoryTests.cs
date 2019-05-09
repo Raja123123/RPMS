@@ -16,6 +16,8 @@ namespace Rpms.DataAccess.Tests
         private readonly IExcelRepository<Product> productRepository;
         public ProductRepositoryTests()
         {
+            var xx = DateTime.Now.ToString("dd/MM/yyyy");
+
             productRepository = new ExcelRepository<Product>(@"D:\repos\Rpms\RPMS\RPMS\Configuration.xlsx");
         }
 
@@ -45,18 +47,22 @@ namespace Rpms.DataAccess.Tests
         [TestMethod()]
         public void AddTest()
         {
-            var ID = Guid.NewGuid();
-
-            var product = productRepository.Add(new Product
+            for (int i = 0; i < 148576; i++)
             {
-                Description = "Desc",
-                ID = ID,
-                Name = "PName",
-                SKU = "SKUNO1",
-                Status = "Active"
-            });
+                var ID = Guid.NewGuid();
 
-            Assert.IsNotNull(product);
+                var product = productRepository.Add(new Product
+                {
+                    Description = "Desc" + i,
+                    ID = ID,
+                    Name = "Name"  +i,
+                    SKU = "SKUN" + i,
+                    Status = "Active"
+                });
+                Assert.IsNotNull(product);
+            }
+            
+
         }
 
 
