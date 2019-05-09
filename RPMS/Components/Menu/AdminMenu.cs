@@ -35,11 +35,14 @@ namespace Rpms.Components.Menu
             {
                 case "Product":
                     var component = new ProductComponent();
+                    component.Dock = DockStyle.Fill;
                     pnlModule.Controls.Add(component);
                     break;
                 default:
                     break;
             }
+
+
 
 
             var lblTitle = (Label)Parent.Controls.Find("lblModuleTitle", true).FirstOrDefault();
