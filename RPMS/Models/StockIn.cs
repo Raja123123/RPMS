@@ -9,7 +9,9 @@ namespace Rpms.Models
     public class StockIn
     {
         public Guid ProductID { get; set; }
+
         public int Quantity { get; set; }
+
         public Guid VendorID { get; set; }
 
         public Decimal MRP { get; set; }
@@ -17,6 +19,9 @@ namespace Rpms.Models
         public Decimal CostPrice { get; set; }
 
         public DateTime Date { get; set; }
+
+        public DateTime EntryDate { get; set; }
+
         public string Status { get; set; }
 
     }

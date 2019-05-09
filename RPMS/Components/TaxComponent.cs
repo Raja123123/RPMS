@@ -57,7 +57,7 @@ namespace Rpms.Components
                     Status = "Active"
                 };
                 taxController.Add(tax);
-                MessageBox.Show("Product Added Sucessfully");
+                MessageBox.Show("Tax Added Sucessfully");
                 grdProducts.DataSource = taxController.GetAllDataTable();
 
             }

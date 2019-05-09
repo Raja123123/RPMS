@@ -60,15 +60,15 @@ namespace Rpms.Components
             {
                 var productType = new ProductType
                 {
-                   
-                    //ID = Guid.NewGuid(),
-                    //Type = txtType.Text,
-                    //Value = Decimal.Parse(txtValue.Text),
-                    //EntryDate = DateTime.Now,
-                    //Status = "Active"
+
+                    ID = Guid.NewGuid(),
+                    Key = txtType.Text,
+                    Value = txtValue.Text,
+                    EntryDate = DateTime.Now,
+                    Status = "Active"
                 };
                 productTypeController.Add(productType);
-                MessageBox.Show("Product Added Sucessfully");
+                MessageBox.Show("ProductType Added Sucessfully");
                 grdProducts.DataSource = productTypeController.GetAllDataTable();
 
             }

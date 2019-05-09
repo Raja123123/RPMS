@@ -46,6 +46,10 @@ namespace Rpms.Components.Menu
                     var productTypeComponent = new ProductTypeComponent();
                     pnlModule.Controls.Add(productTypeComponent);
                     break;
+                case "Discount Code":
+                    var discountCodeComponent = new DiscountCodeComponent();
+                    pnlModule.Controls.Add(discountCodeComponent);
+                    break;
                 default:
                     break;
             }
@@ -64,6 +68,11 @@ namespace Rpms.Components.Menu
         {
             PopulateModule("Product Type");
 
+        }
+
+        private void btnDiscount_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Discount Code");
         }
     }
 }
