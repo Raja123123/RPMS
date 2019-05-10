@@ -38,7 +38,7 @@
             // 
             // btnProduct
             // 
-            this.btnProduct.Location = new System.Drawing.Point(15, 22);
+            this.btnProduct.Location = new System.Drawing.Point(14, 42);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(131, 23);
             this.btnProduct.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // btnTax
             // 
-            this.btnTax.Location = new System.Drawing.Point(15, 52);
+            this.btnTax.Location = new System.Drawing.Point(14, 13);
             this.btnTax.Name = "btnTax";
             this.btnTax.Size = new System.Drawing.Size(131, 23);
             this.btnTax.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 82);
+            this.button3.Location = new System.Drawing.Point(14, 158);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 23);
             this.button3.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             // btnDiscount
             // 
-            this.btnDiscount.Location = new System.Drawing.Point(15, 112);
+            this.btnDiscount.Location = new System.Drawing.Point(14, 71);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(131, 23);
             this.btnDiscount.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // btnVendor
             // 
-            this.btnVendor.Location = new System.Drawing.Point(15, 141);
+            this.btnVendor.Location = new System.Drawing.Point(14, 100);
             this.btnVendor.Name = "btnVendor";
             this.btnVendor.Size = new System.Drawing.Size(131, 23);
             this.btnVendor.TabIndex = 4;
@@ -87,11 +87,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(15, 168);
+            this.button2.Location = new System.Drawing.Point(14, 129);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
+            this.button2.Text = "Orgnization";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // AdminMenu

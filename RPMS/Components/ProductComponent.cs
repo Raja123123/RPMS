@@ -44,6 +44,9 @@ namespace Rpms.Components
 
             lblTitle.Text = "Update Product";
             btnSave.Text = "Update";
+
+            
+
         }
 
        

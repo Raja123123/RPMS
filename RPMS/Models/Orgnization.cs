@@ -8,5 +8,6 @@ namespace Rpms.Models
 {
     public class Orgnization : Vendor
     {
+
     }
 }

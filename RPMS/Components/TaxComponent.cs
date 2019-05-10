@@ -14,8 +14,8 @@ namespace Rpms.Components
 {
     public partial class TaxComponent : UserControl
     {
-        public readonly Guid TaxID;
-
+        public  Guid TaxID;
+        DataTable dtProducts;
         public readonly TaxController taxController;
 
         public TaxComponent()
@@ -27,20 +27,21 @@ namespace Rpms.Components
 
         private void Bind()
         {
-            if (TaxID == Guid.Empty)
-            {
-                btnSave.Text = "Add";
-            }
-            grdProducts.DataSource = taxController.GetAllDataTable();
+            btnSave.Text = "Add";
+            lblTitle.Text = "Add Tax";
+            grdProducts.DataSource = dtProducts = taxController.GetAllDataTable();
         }
-        private void PopulateProduct(Guid ID)
+        private void PopulateTax(Guid ID)
         {
             var tax = taxController.FindById(ID);
-           
+
             txtType.Text = tax.Type;
             txtValue.Text = tax.Value.ToString();
             chkStatus.Checked = tax.Status == "Active";
+            TaxID = tax.ID;
 
+            lblTitle.Text = "Update Tax";
+            btnSave.Text = "Update";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace Rpms.Components
             {
                 var tax = new Tax
                 {
-                   
+
                     ID = Guid.NewGuid(),
                     Type = txtType.Text,
                     Value = Decimal.Parse(txtValue.Text),
@@ -63,19 +64,39 @@ namespace Rpms.Components
             }
             else
             {
+                var tax = new Tax
+                {
 
+                    ID = Guid.NewGuid(),
+                    Type = txtType.Text,
+                    Value = Decimal.Parse(txtValue.Text),
+                    EntryDate = DateTime.Now,
+                    Status = "Active"
+                };
+                taxController.Update(TaxID, tax);
+                grdProducts.DataSource = dtProducts = taxController.GetAllDataTable();
+                MessageBox.Show("Tax Updated Sucessfully");
             }
         }
 
         private void TaxComponent_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            grdProducts.DataSource = taxController.GetSearchDataTable(txtSearch.Text);
-            //PopulateProduct(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                //grdProducts.DataSource =((DataTable)grdProducts.DataSource).Find(txtSearch.Text);
+                grdProducts.DataSource = dtProducts.Find(txtSearch.Text);
+
+            }
+        }
+
+        private void grdProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PopulateTax(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
 
         }
     }

@@ -101,7 +101,6 @@
     <Compile Include="Models\InvoicePrint.cs" />
     <Compile Include="Models\InvoiceProduct.cs" />
     <Compile Include="Models\InvoiceSetting.cs" />
-    <Compile Include="Models\Note.cs" />
     <Compile Include="Models\Orgnization.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductTax.cs" />

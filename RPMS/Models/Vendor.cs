@@ -18,6 +18,8 @@ namespace Rpms.Models
 
         public string Email { get; set; }
 
+        public string GST { get; set; }
+
         public DateTime EntryDate { get; set; }
 
         public string Status { get; set; }
