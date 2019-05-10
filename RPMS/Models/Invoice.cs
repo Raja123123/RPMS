@@ -18,5 +18,7 @@ namespace Rpms.Models
         public Decimal DiscountCodeAmount { get; set; }
         public Decimal TotalDiscount { get; set; }
 
+        public DateTime Date { get; set; }
+
     }
 }
