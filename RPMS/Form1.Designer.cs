@@ -33,8 +33,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlModule = new System.Windows.Forms.Panel();
             this.adminMenu1 = new Rpms.Components.Menu.AdminMenu();
-            this.lblModuleTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblModuleTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,8 +62,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.617095F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.3829F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.0438F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.95621F));
             this.tableLayoutPanel1.Controls.Add(this.pnlModule, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.adminMenu1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
@@ -79,9 +79,9 @@
             // pnlModule
             // 
             this.pnlModule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlModule.Location = new System.Drawing.Point(126, 40);
+            this.pnlModule.Location = new System.Drawing.Point(167, 40);
             this.pnlModule.Name = "pnlModule";
-            this.pnlModule.Size = new System.Drawing.Size(1310, 643);
+            this.pnlModule.Size = new System.Drawing.Size(1200, 643);
             this.pnlModule.TabIndex = 1;
             // 
             // adminMenu1
@@ -90,6 +90,15 @@
             this.adminMenu1.Name = "adminMenu1";
             this.adminMenu1.Size = new System.Drawing.Size(156, 191);
             this.adminMenu1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblModuleTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(167, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1200, 31);
+            this.panel1.TabIndex = 3;
             // 
             // lblModuleTitle
             // 
@@ -101,22 +110,13 @@
             this.lblModuleTitle.TabIndex = 0;
             this.lblModuleTitle.Text = "Header";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblModuleTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(126, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1310, 31);
-            this.panel1.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1439, 686);
+            this.ClientSize = new System.Drawing.Size(1370, 686);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";

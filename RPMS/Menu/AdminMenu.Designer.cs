@@ -105,7 +105,7 @@
             this.Controls.Add(this.btnTax);
             this.Controls.Add(this.btnProduct);
             this.Name = "AdminMenu";
-            this.Size = new System.Drawing.Size(179, 323);
+            this.Size = new System.Drawing.Size(160, 323);
             this.ResumeLayout(false);
 
         }

@@ -102,5 +102,10 @@ namespace Rpms.Components
         {
            PopulateProduct(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
