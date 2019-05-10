@@ -12,7 +12,7 @@ namespace Rpms.Models
         public string Role { get; set; }
         public string Name { get; set; }
         public string MobileNo { get; set; }
-        public string Adderss { get; set; }
+        public string Address { get; set; }
         public string Status { get; set; }
         
     }

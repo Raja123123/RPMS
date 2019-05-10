@@ -76,9 +76,13 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DiscountCode.cs" />
     <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\InvoicePrint.cs" />
     <Compile Include="Models\InvoiceProduct.cs" />
+    <Compile Include="Models\InvoiceSetting.cs" />
     <Compile Include="Models\Note.cs" />
+    <Compile Include="Models\Orgnization.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductTax.cs" />
     <Compile Include="Models\ProductType.cs" />
     <Compile Include="Models\StockIn.cs" />
     <Compile Include="Models\StockOut.cs" />
