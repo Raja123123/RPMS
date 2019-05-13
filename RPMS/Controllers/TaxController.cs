@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Rpms.Controllers
 {
@@ -15,7 +17,7 @@ namespace Rpms.Controllers
         private readonly IExcelRepository<Tax> taxRepository;
         public TaxController()
         {
-            taxRepository = new ExcelRepository<Tax>(ConfigurationManager.AppSettings["ExcelString"]);
+            taxRepository = new ExcelRepository<Tax>(Path.GetDirectoryName(Application.ExecutablePath) + "\\" + ConfigurationManager.AppSettings["ExcelString"]);
         }
 
         public Tax Add(Tax entity)

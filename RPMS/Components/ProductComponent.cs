@@ -17,6 +17,8 @@ namespace Rpms.Components
         public Guid ProductID;
 
         public readonly ProductController productController;
+        public readonly ProductTaxController productTaxController;
+        public readonly TaxController taxController;
 
 
         DataTable dtProducts;
@@ -24,6 +26,8 @@ namespace Rpms.Components
         {
             InitializeComponent();
             productController = new ProductController();
+            productTaxController = new ProductTaxController();
+            taxController =  new TaxController();
             Bind();
         }
 
@@ -31,8 +35,10 @@ namespace Rpms.Components
             btnSave.Text = "Add";
             lblTitle.Text = "Add Product";
             grdProducts.DataSource = dtProducts =  productController.GetAllDataTable();
+            pnlTax.Visible = false;
+
         }
-        private void PopulateProduct(Guid ID)
+        public void PopulateProduct(Guid ID)
         {
             var product = productController.FindById(ID);
             txtName.Text = product.Name;
@@ -45,8 +51,27 @@ namespace Rpms.Components
             lblTitle.Text = "Update Product";
             btnSave.Text = "Update";
 
-            
+            pnlTax.Visible = true;
 
+
+            var allProductTax = productTaxController.All().Where(t => t.ProductID == ID && t.Status == "Active").ToList();
+            var allTax = taxController.All();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("ProductTaxID", typeof(Guid));
+            dt.Columns.Add("Tax");
+
+            foreach (var productTax in allProductTax)
+            {
+                DataRow tax = dt.NewRow();
+                tax["ProductTaxID"] = productTax.ID;
+                tax["Tax"] = allTax.Where(t => t.ID == productTax.TaxId).Select(t => $"{t.Type} - {t.Value}%").FirstOrDefault();
+                dt.Rows.Add(tax);
+            }
+
+            grdTax.DataSource = dt;
+            grdTax.Columns[0].Visible = false;
+            btnDeleteTax.Visible = false;
         }
 
        
@@ -109,6 +134,25 @@ namespace Rpms.Components
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAddtax_Click(object sender, EventArgs e)
+        {
+            ProductTaxForm productTaxForm = new ProductTaxForm(productController.FindById(ProductID), this);
+            productTaxForm.Show();
+        }
+
+        private void BtnDeleteTax_Click(object sender, EventArgs e)
+        {
+            var productTaxID = Guid.Parse(grdTax.SelectedRows[0].Cells[0].Value.ToString());
+            productTaxController.Delete(productTaxID);
+            MessageBox.Show("Product Tax Deleted Sucessfully");
+            PopulateProduct(ProductID);
+        }
+
+        private void GrdTax_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDeleteTax.Visible = true;
         }
     }
 }

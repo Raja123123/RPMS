@@ -46,10 +46,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.grdTax = new System.Windows.Forms.DataGridView();
+            this.btnAddtax = new System.Windows.Forms.Button();
+            this.pnlTax = new System.Windows.Forms.Panel();
+            this.btnDeleteTax = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTax)).BeginInit();
+            this.pnlTax.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -141,14 +147,15 @@
             // 
             // grdProducts
             // 
+            this.grdProducts.AllowUserToAddRows = false;
             this.grdProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdProducts.Location = new System.Drawing.Point(187, 38);
+            this.grdProducts.Location = new System.Drawing.Point(184, 38);
             this.grdProducts.MultiSelect = false;
             this.grdProducts.Name = "grdProducts";
             this.grdProducts.ReadOnly = true;
             this.grdProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdProducts.Size = new System.Drawing.Size(790, 426);
+            this.grdProducts.Size = new System.Drawing.Size(793, 426);
             this.grdProducts.TabIndex = 6;
             this.grdProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdProducts_CellDoubleClick);
             // 
@@ -189,8 +196,8 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.87755F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.12245F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.57143F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.42857F));
             this.tableLayoutPanel1.Controls.Add(this.grdProducts, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
@@ -206,6 +213,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnlTax);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
@@ -220,7 +228,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 426);
+            this.panel1.Size = new System.Drawing.Size(175, 426);
             this.panel1.TabIndex = 1;
             // 
             // panel2
@@ -228,10 +236,55 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(187, 3);
+            this.panel2.Location = new System.Drawing.Point(184, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(790, 29);
+            this.panel2.Size = new System.Drawing.Size(793, 29);
             this.panel2.TabIndex = 2;
+            // 
+            // grdTax
+            // 
+            this.grdTax.AllowUserToAddRows = false;
+            this.grdTax.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdTax.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdTax.Location = new System.Drawing.Point(3, 3);
+            this.grdTax.MultiSelect = false;
+            this.grdTax.Name = "grdTax";
+            this.grdTax.ReadOnly = true;
+            this.grdTax.RowHeadersVisible = false;
+            this.grdTax.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdTax.Size = new System.Drawing.Size(163, 108);
+            this.grdTax.TabIndex = 6;
+            this.grdTax.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdTax_RowEnter);
+            // 
+            // btnAddtax
+            // 
+            this.btnAddtax.Location = new System.Drawing.Point(88, 117);
+            this.btnAddtax.Name = "btnAddtax";
+            this.btnAddtax.Size = new System.Drawing.Size(75, 23);
+            this.btnAddtax.TabIndex = 7;
+            this.btnAddtax.Text = "Add Tax";
+            this.btnAddtax.UseVisualStyleBackColor = true;
+            this.btnAddtax.Click += new System.EventHandler(this.BtnAddtax_Click);
+            // 
+            // pnlTax
+            // 
+            this.pnlTax.Controls.Add(this.btnDeleteTax);
+            this.pnlTax.Controls.Add(this.grdTax);
+            this.pnlTax.Controls.Add(this.btnAddtax);
+            this.pnlTax.Location = new System.Drawing.Point(6, 180);
+            this.pnlTax.Name = "pnlTax";
+            this.pnlTax.Size = new System.Drawing.Size(166, 145);
+            this.pnlTax.TabIndex = 8;
+            // 
+            // btnDeleteTax
+            // 
+            this.btnDeleteTax.Location = new System.Drawing.Point(3, 117);
+            this.btnDeleteTax.Name = "btnDeleteTax";
+            this.btnDeleteTax.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteTax.TabIndex = 8;
+            this.btnDeleteTax.Text = "Delete Tax";
+            this.btnDeleteTax.UseVisualStyleBackColor = true;
+            this.btnDeleteTax.Click += new System.EventHandler(this.BtnDeleteTax_Click);
             // 
             // ProductComponent
             // 
@@ -247,6 +300,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdTax)).EndInit();
+            this.pnlTax.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -271,5 +326,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView grdTax;
+        private System.Windows.Forms.Button btnAddtax;
+        private System.Windows.Forms.Panel pnlTax;
+        private System.Windows.Forms.Button btnDeleteTax;
     }
 }

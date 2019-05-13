@@ -8,7 +8,14 @@ namespace Rpms.Models
 {
     public class ProductTax
     {
+
+        public Guid ID { get; set; }
+
         public Guid ProductID { get; set; }
         public Guid TaxId { get; set; }
+
+        public string Status { get; set; }
+
+        public DateTime EntryDate { get; set; }
     }
 }

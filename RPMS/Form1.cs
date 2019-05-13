@@ -16,7 +16,6 @@ namespace Rpms
         public Form1()
         {
             InitializeComponent();
-
         }
     }
 }
