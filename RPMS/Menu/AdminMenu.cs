@@ -34,19 +34,45 @@ namespace Rpms.Components.Menu
             switch (moduleName)
             {
                 case "Product":
-                    var component = new ProductComponent();
-                    component.Dock = DockStyle.Fill;
-                    pnlModule.Controls.Add(component);
+                    var productComponent = new ProductComponent();
+                    pnlModule.Controls.Add(productComponent);
+                    title = "All Products";
+                    break;
+                case "Tax":
+                    var taxComponent = new TaxComponent();
+                    pnlModule.Controls.Add(taxComponent);
+                    break;
+                case "Product Type":
+                    var productTypeComponent = new ProductTypeComponent();
+                    pnlModule.Controls.Add(productTypeComponent);
+                    break;
+                case "Discount Code":
+                    var discountCodeComponent = new DiscountCodeComponent();
+                    pnlModule.Controls.Add(discountCodeComponent);
                     break;
                 default:
                     break;
             }
 
 
-
-
             var lblTitle = (Label)Parent.Controls.Find("lblModuleTitle", true).FirstOrDefault();
             lblTitle.Text = string.IsNullOrEmpty(title) ? moduleName : title ;
+        }
+
+        private void btnTax_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Tax");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Product Type");
+
+        }
+
+        private void btnDiscount_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Discount Code");
         }
     }
 }

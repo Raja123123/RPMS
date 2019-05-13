@@ -44,6 +44,9 @@ namespace Rpms.Components
 
             lblTitle.Text = "Update Product";
             btnSave.Text = "Update";
+
+            
+
         }
 
        
@@ -101,6 +104,11 @@ namespace Rpms.Components
         private void GrdProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            PopulateProduct(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

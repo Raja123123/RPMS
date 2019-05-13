@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
+            this.productTax1 = new Rpms.Demo.ProductTax();
             this.SuspendLayout();
             // 
             // comboPrinter
@@ -73,11 +74,19 @@
             this.printPreviewControl1.Size = new System.Drawing.Size(385, 479);
             this.printPreviewControl1.TabIndex = 3;
             // 
+            // productTax1
+            // 
+            this.productTax1.Location = new System.Drawing.Point(482, 45);
+            this.productTax1.Name = "productTax1";
+            this.productTax1.Size = new System.Drawing.Size(331, 370);
+            this.productTax1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 633);
+            this.ClientSize = new System.Drawing.Size(907, 633);
+            this.Controls.Add(this.productTax1);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -97,6 +106,7 @@
         private System.Windows.Forms.Button button1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
+        private ProductTax productTax1;
     }
 }
 
