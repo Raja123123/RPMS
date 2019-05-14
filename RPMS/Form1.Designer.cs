@@ -79,25 +79,25 @@
             // pnlModule
             // 
             this.pnlModule.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlModule.Location = new System.Drawing.Point(167, 40);
+            this.pnlModule.Location = new System.Drawing.Point(168, 40);
             this.pnlModule.Name = "pnlModule";
-            this.pnlModule.Size = new System.Drawing.Size(1200, 643);
+            this.pnlModule.Size = new System.Drawing.Size(1199, 643);
             this.pnlModule.TabIndex = 1;
             // 
             // adminMenu1
             // 
             this.adminMenu1.Location = new System.Drawing.Point(3, 40);
             this.adminMenu1.Name = "adminMenu1";
-            this.adminMenu1.Size = new System.Drawing.Size(156, 191);
+            this.adminMenu1.Size = new System.Drawing.Size(156, 312);
             this.adminMenu1.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblModuleTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(167, 3);
+            this.panel1.Location = new System.Drawing.Point(168, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 31);
+            this.panel1.Size = new System.Drawing.Size(1199, 31);
             this.panel1.TabIndex = 3;
             // 
             // lblModuleTitle

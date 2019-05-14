@@ -8,6 +8,8 @@ namespace Rpms.Models
 {
     public class StockIn
     {
+        public Guid ID { get; set; }
+
         public Guid ProductID { get; set; }
 
         public int Quantity { get; set; }

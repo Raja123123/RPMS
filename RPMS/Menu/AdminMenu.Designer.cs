@@ -34,6 +34,7 @@
             this.btnDiscount = new System.Windows.Forms.Button();
             this.btnVendor = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn_StockIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProduct
@@ -84,6 +85,7 @@
             this.btnVendor.TabIndex = 4;
             this.btnVendor.Text = "Vendor";
             this.btnVendor.UseVisualStyleBackColor = true;
+            this.btnVendor.Click += new System.EventHandler(this.btnVendor_Click);
             // 
             // button2
             // 
@@ -94,10 +96,21 @@
             this.button2.Text = "Orgnization";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // btn_StockIn
+            // 
+            this.btn_StockIn.Location = new System.Drawing.Point(14, 187);
+            this.btn_StockIn.Name = "btn_StockIn";
+            this.btn_StockIn.Size = new System.Drawing.Size(131, 23);
+            this.btn_StockIn.TabIndex = 6;
+            this.btn_StockIn.Text = "StockIn";
+            this.btn_StockIn.UseVisualStyleBackColor = true;
+            this.btn_StockIn.Click += new System.EventHandler(this.btn_StockIn_Click);
+            // 
             // AdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_StockIn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnVendor);
             this.Controls.Add(this.btnDiscount);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Button btnDiscount;
         private System.Windows.Forms.Button btnVendor;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_StockIn;
     }
 }

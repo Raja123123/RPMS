@@ -10,47 +10,47 @@ using System.Threading.Tasks;
 
 namespace Rpms.Controllers
 {
-    public class TaxController : IExcelRepository<Tax>
+    public class VendorController : IExcelRepository<Vendor>
     {
-        private readonly IExcelRepository<Tax> taxRepository;
-        public TaxController()
+        private readonly IExcelRepository<Vendor> vendorRepository;
+        public VendorController()
         {
-            taxRepository = new ExcelRepository<Tax>(ConfigurationManager.AppSettings["ExcelString"]);
+            vendorRepository = new ExcelRepository<Vendor>(ConfigurationManager.AppSettings["ExcelString"]);
         }
 
-        public Tax Add(Tax entity)
+        public Vendor Add(Vendor entity)
         {
-            return taxRepository.Add(entity);
+            return vendorRepository.Add(entity);
         }
 
-        public IEnumerable<Tax> All()
+        public IEnumerable<Vendor> All()
         {
-            return taxRepository.All();
+            return vendorRepository.All();
         }
 
         public bool Delete(Guid id)
         {
-            return taxRepository.Delete(id);
+            return vendorRepository.Delete(id);
         }
 
-        public Tax FindById(Guid id)
+        public Vendor FindById(Guid id)
         {
-            return taxRepository.FindById(id);
+            return vendorRepository.FindById(id);
         }
 
         public DataTable GetAllDataTable()
         {
-            return taxRepository.GetAllDataTable();
+            return vendorRepository.GetAllDataTable();
         }
 
         public DataTable GetSearchDataTable(string key)
         {
-            return taxRepository.GetSearchDataTable(key);
+            return vendorRepository.GetSearchDataTable(key);
         }
 
-        public bool Update(Guid id, Tax entity)
+        public bool Update(Guid id, Vendor entity)
         {
-            return taxRepository.Update(id, entity);
+            return vendorRepository.Update(id, entity);
         }
     }
 }

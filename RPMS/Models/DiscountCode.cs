@@ -12,8 +12,6 @@ namespace Rpms.Models
     {
         public Guid ID { get; set; }
 
-        public Guid ProductID{ get; set; }
-
         public string Code { get; set; }
 
         public DateTime FromDate { get; set; }

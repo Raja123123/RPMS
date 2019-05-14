@@ -50,6 +50,14 @@ namespace Rpms.Components.Menu
                     var discountCodeComponent = new DiscountCodeComponent();
                     pnlModule.Controls.Add(discountCodeComponent);
                     break;
+                case "Vendor":
+                    var vendorComponent = new VendorComponent();
+                    pnlModule.Controls.Add(vendorComponent);
+                    break;
+                case "StockIn":
+                    var stockInComponent = new StockInComponent();
+                    pnlModule.Controls.Add(stockInComponent);
+                    break;
                 default:
                     break;
             }
@@ -73,6 +81,16 @@ namespace Rpms.Components.Menu
         private void btnDiscount_Click(object sender, EventArgs e)
         {
             PopulateModule("Discount Code");
+        }
+
+        private void btnVendor_Click(object sender, EventArgs e)
+        {
+            PopulateModule("Vendor");
+        }
+
+        private void btn_StockIn_Click(object sender, EventArgs e)
+        {
+            PopulateModule("StockIn");
         }
     }
 }

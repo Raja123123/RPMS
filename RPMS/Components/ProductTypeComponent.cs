@@ -10,11 +10,13 @@ using System.Windows.Forms;
 using Rpms.Models;
 using Rpms.Controllers;
 
+
 namespace Rpms.Components
 {
     public partial class ProductTypeComponent : UserControl
     {
-        public readonly Guid ProductTypeID;
+        public Guid ProductTypeID;
+        DataTable dtProductType;
 
         public readonly ProductController productController;
 
@@ -46,22 +48,37 @@ namespace Rpms.Components
             }
             grdProducts.DataSource = productTypeController.GetAllDataTable();
         }
-        private void PopulateProduct(Guid ID)
+        private void PopulateProductType(Guid ID)
         {
-            var productType = productTypeController.FindById(ID);
-           
-           
 
+            var productType = productTypeController.FindById(ID);
+            foreach (ComboboxItem item in comProductType.Items)
+            {
+                if ((Guid)item.Value == productType.ProductID)
+                {
+                    comProductType.SelectedItem = item;
+                    break;
+                }
+            }
+
+            txtType.Text = productType.Key;
+            txtValue.Text = productType.Value;
+            chkStatus.Checked = productType.Status == "Active";
+
+            ProductTypeID = productType.ID;
+            btnSave.Text = "Update";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (btnSave.Text == "Add")
             {
+                var productId = ((ComboboxItem)comProductType.SelectedItem).Value.ToString();
                 var productType = new ProductType
                 {
 
                     ID = Guid.NewGuid(),
+                    ProductID = Guid.Parse(productId),
                     Key = txtType.Text,
                     Value = txtValue.Text,
                     EntryDate = DateTime.Now,
@@ -74,7 +91,21 @@ namespace Rpms.Components
             }
             else
             {
+                var productId = ((ComboboxItem)comProductType.SelectedItem).Value.ToString();
 
+                var productType = new ProductType
+                {
+
+                    ID = ProductTypeID,
+                    ProductID = Guid.Parse(productId),
+                    Key = txtType.Text,
+                    Value = txtValue.Text,
+                    EntryDate = DateTime.Now,
+                    Status = "Active"
+                };
+                productTypeController.Update(ProductTypeID, productType);
+                grdProducts.DataSource = dtProductType = productTypeController.GetAllDataTable();
+                MessageBox.Show("Product Type Updated Sucessfully");
             }
         }
 
@@ -87,6 +118,21 @@ namespace Rpms.Components
         {
             grdProducts.DataSource = productTypeController.GetSearchDataTable(txtSearch.Text);
 
+        }
+
+        private void grdProductsType_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PopulateProductType(Guid.Parse(grdProducts.SelectedRows[0].Cells[0].Value.ToString()));
+        }
+
+        private void ProductTypeSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                //grdProducts.DataSource =((DataTable)grdProducts.DataSource).Find(txtSearch.Text);
+                grdProducts.DataSource = dtProductType.Find(txtSearch.Text);
+
+            }
         }
     }
 }

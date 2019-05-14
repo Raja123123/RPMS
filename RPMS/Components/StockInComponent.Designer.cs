@@ -1,6 +1,6 @@
 ﻿namespace Rpms.Components
 {
-    partial class TaxComponent
+    partial class StockInComponent
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,23 +30,29 @@
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.grdProducts = new System.Windows.Forms.DataGridView();
+            this.grdStockIn = new System.Windows.Forms.DataGridView();
             this.chkStatus = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtValue = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtVendorid = new System.Windows.Forms.TextBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtCostPrice = new System.Windows.Forms.TextBox();
+            this.txtMRP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).BeginInit();
+            this.dateTimePickerStockin = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.grdStockIn)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -74,22 +80,22 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Search";
             // 
-            // grdProducts
+            // grdStockIn
             // 
-            this.grdProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdProducts.Location = new System.Drawing.Point(3, 3);
-            this.grdProducts.MultiSelect = false;
-            this.grdProducts.Name = "grdProducts";
-            this.grdProducts.ReadOnly = true;
-            this.grdProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdProducts.Size = new System.Drawing.Size(827, 406);
-            this.grdProducts.TabIndex = 21;
-            this.grdProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProducts_CellDoubleClick);
+            this.grdStockIn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdStockIn.Location = new System.Drawing.Point(3, 3);
+            this.grdStockIn.MultiSelect = false;
+            this.grdStockIn.Name = "grdStockIn";
+            this.grdStockIn.ReadOnly = true;
+            this.grdStockIn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdStockIn.Size = new System.Drawing.Size(827, 406);
+            this.grdStockIn.TabIndex = 21;
+            this.grdStockIn.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProducts_CellDoubleClick);
             // 
             // chkStatus
             // 
             this.chkStatus.AutoSize = true;
-            this.chkStatus.Location = new System.Drawing.Point(50, 69);
+            this.chkStatus.Location = new System.Drawing.Point(75, 182);
             this.chkStatus.Name = "chkStatus";
             this.chkStatus.Size = new System.Drawing.Size(56, 17);
             this.chkStatus.TabIndex = 20;
@@ -98,7 +104,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(50, 92);
+            this.btnSave.Location = new System.Drawing.Point(75, 205);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 19;
@@ -106,33 +112,33 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtValue
+            // txtVendorid
             // 
-            this.txtValue.Location = new System.Drawing.Point(50, 36);
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(100, 20);
-            this.txtValue.TabIndex = 16;
+            this.txtVendorid.Location = new System.Drawing.Point(75, 36);
+            this.txtVendorid.Name = "txtVendorid";
+            this.txtVendorid.Size = new System.Drawing.Size(100, 20);
+            this.txtVendorid.TabIndex = 16;
             // 
-            // txtType
+            // txtQuantity
             // 
-            this.txtType.Location = new System.Drawing.Point(50, 6);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(100, 20);
-            this.txtType.TabIndex = 18;
+            this.txtQuantity.Location = new System.Drawing.Point(75, 6);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Value";
+            this.label2.Text = "VendorID";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 69);
+            this.label4.Location = new System.Drawing.Point(3, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 11;
@@ -148,14 +154,14 @@
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "lblAddUpdateTitle";
             // 
-            // label1
+            // lblname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Type";
+            this.lblname.AutoSize = true;
+            this.lblname.Location = new System.Drawing.Point(3, 6);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(46, 13);
+            this.lblname.TabIndex = 14;
+            this.lblname.Text = "Quantity";
             // 
             // tableLayoutPanel1
             // 
@@ -177,7 +183,7 @@
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.grdProducts);
+            this.flowLayoutPanel3.Controls.Add(this.grdStockIn);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(200, 38);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -195,17 +201,64 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dateTimePickerStockin);
+            this.panel3.Controls.Add(this.txtCostPrice);
+            this.panel3.Controls.Add(this.txtMRP);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblname);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtType);
+            this.panel3.Controls.Add(this.txtQuantity);
             this.panel3.Controls.Add(this.chkStatus);
-            this.panel3.Controls.Add(this.txtValue);
+            this.panel3.Controls.Add(this.txtVendorid);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(188, 287);
             this.panel3.TabIndex = 0;
+            // 
+            // txtCostPrice
+            // 
+            this.txtCostPrice.Location = new System.Drawing.Point(75, 109);
+            this.txtCostPrice.Name = "txtCostPrice";
+            this.txtCostPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtCostPrice.TabIndex = 25;
+            // 
+            // txtMRP
+            // 
+            this.txtMRP.Location = new System.Drawing.Point(75, 75);
+            this.txtMRP.Name = "txtMRP";
+            this.txtMRP.Size = new System.Drawing.Size(100, 20);
+            this.txtMRP.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Date";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "CostPrice";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "MRP";
             // 
             // panel1
             // 
@@ -234,15 +287,22 @@
             this.panel2.Size = new System.Drawing.Size(851, 61);
             this.panel2.TabIndex = 0;
             // 
-            // TaxComponent
+            // dateTimePickerStockin
+            // 
+            this.dateTimePickerStockin.Location = new System.Drawing.Point(75, 143);
+            this.dateTimePickerStockin.Name = "dateTimePickerStockin";
+            this.dateTimePickerStockin.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerStockin.TabIndex = 26;
+            // 
+            // StockInComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "TaxComponent";
+            this.Name = "StockInComponent";
             this.Size = new System.Drawing.Size(1033, 485);
-            this.Load += new System.EventHandler(this.TaxComponent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).EndInit();
+            this.Load += new System.EventHandler(this.StockInComponent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdStockIn)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -261,15 +321,15 @@
 
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView grdProducts;
+        private System.Windows.Forms.DataGridView grdStockIn;
         private System.Windows.Forms.CheckBox chkStatus;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtValue;
-        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtVendorid;
+        private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -277,5 +337,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCostPrice;
+        private System.Windows.Forms.TextBox txtMRP;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStockin;
     }
 }

@@ -51,6 +51,7 @@
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 23;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ProductTypeSearch_KeyPress);
             // 
             // label6
             // 
@@ -65,9 +66,13 @@
             // 
             this.grdProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProducts.Location = new System.Drawing.Point(362, 57);
+            this.grdProducts.MultiSelect = false;
             this.grdProducts.Name = "grdProducts";
+            this.grdProducts.ReadOnly = true;
+            this.grdProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdProducts.Size = new System.Drawing.Size(603, 344);
             this.grdProducts.TabIndex = 21;
+            this.grdProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProductsType_CellDoubleClick);
             // 
             // chkStatus
             // 

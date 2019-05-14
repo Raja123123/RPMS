@@ -15,6 +15,7 @@ namespace Rpms.Components
     public partial class DiscountCodeComponent : UserControl
     {
         public readonly Guid DiscountCodeID;
+        DataTable dtDiscountCode;
 
         public readonly DiscountCodeController discountcodeController;
 
@@ -33,7 +34,7 @@ namespace Rpms.Components
             }
             grdDiscountCode.DataSource = discountcodeController.GetAllDataTable();
         }
-        private void PopulateProduct(Guid ID)
+        private void PopulateDiscountCode(Guid ID)
         {
             var discountcode = discountcodeController.FindById(ID);
 
@@ -78,6 +79,20 @@ namespace Rpms.Components
         private void DiscountCodeComponent_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void DiscountCodeSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                grdDiscountCode.DataSource = dtDiscountCode.Find(txtSearch.Text);
+
+            }
+        }
+
+        private void grdDiscountCode_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PopulateDiscountCode(Guid.Parse(grdDiscountCode.SelectedRows[0].Cells[0].Value.ToString()));
         }
     }
 }

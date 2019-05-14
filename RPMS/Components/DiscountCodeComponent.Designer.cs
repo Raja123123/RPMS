@@ -50,7 +50,8 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 20);
             this.txtSearch.TabIndex = 23;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.TextChanged += new System.EventHandler(this.DiscountCodeComponent_Load);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DiscountCodeSearch_KeyPress);
             // 
             // label6
             // 
@@ -65,9 +66,13 @@
             // 
             this.grdDiscountCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDiscountCode.Location = new System.Drawing.Point(362, 57);
+            this.grdDiscountCode.MultiSelect = false;
             this.grdDiscountCode.Name = "grdDiscountCode";
+            this.grdDiscountCode.ReadOnly = true;
+            this.grdDiscountCode.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDiscountCode.Size = new System.Drawing.Size(603, 344);
             this.grdDiscountCode.TabIndex = 21;
+            this.grdDiscountCode.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDiscountCode_CellDoubleClick);
             // 
             // chkStatus
             // 

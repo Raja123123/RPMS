@@ -1,6 +1,6 @@
 ﻿namespace Rpms.Components
 {
-    partial class TaxComponent
+    partial class VendorComponent
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.grdProducts = new System.Windows.Forms.DataGridView();
+            this.grdVendor = new System.Windows.Forms.DataGridView();
             this.chkStatus = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtValue = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,7 +46,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMobileNumber = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtGst = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendor)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -74,22 +80,22 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Search";
             // 
-            // grdProducts
+            // grdVendor
             // 
-            this.grdProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdProducts.Location = new System.Drawing.Point(3, 3);
-            this.grdProducts.MultiSelect = false;
-            this.grdProducts.Name = "grdProducts";
-            this.grdProducts.ReadOnly = true;
-            this.grdProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdProducts.Size = new System.Drawing.Size(827, 406);
-            this.grdProducts.TabIndex = 21;
-            this.grdProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProducts_CellDoubleClick);
+            this.grdVendor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdVendor.Location = new System.Drawing.Point(3, 3);
+            this.grdVendor.MultiSelect = false;
+            this.grdVendor.Name = "grdVendor";
+            this.grdVendor.ReadOnly = true;
+            this.grdVendor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdVendor.Size = new System.Drawing.Size(827, 406);
+            this.grdVendor.TabIndex = 21;
+            this.grdVendor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProducts_CellDoubleClick);
             // 
             // chkStatus
             // 
             this.chkStatus.AutoSize = true;
-            this.chkStatus.Location = new System.Drawing.Point(50, 69);
+            this.chkStatus.Location = new System.Drawing.Point(75, 182);
             this.chkStatus.Name = "chkStatus";
             this.chkStatus.Size = new System.Drawing.Size(56, 17);
             this.chkStatus.TabIndex = 20;
@@ -98,7 +104,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(50, 92);
+            this.btnSave.Location = new System.Drawing.Point(75, 205);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 19;
@@ -106,33 +112,33 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtValue
+            // txtAddress
             // 
-            this.txtValue.Location = new System.Drawing.Point(50, 36);
-            this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(100, 20);
-            this.txtValue.TabIndex = 16;
+            this.txtAddress.Location = new System.Drawing.Point(75, 36);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(100, 20);
+            this.txtAddress.TabIndex = 16;
             // 
-            // txtType
+            // txtName
             // 
-            this.txtType.Location = new System.Drawing.Point(50, 6);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(100, 20);
-            this.txtType.TabIndex = 18;
+            this.txtName.Location = new System.Drawing.Point(75, 6);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Value";
+            this.label2.Text = "Address";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 69);
+            this.label4.Location = new System.Drawing.Point(3, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 11;
@@ -148,14 +154,14 @@
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "lblAddUpdateTitle";
             // 
-            // label1
+            // lblname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Type";
+            this.lblname.AutoSize = true;
+            this.lblname.Location = new System.Drawing.Point(3, 6);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(35, 13);
+            this.lblname.TabIndex = 14;
+            this.lblname.Text = "Name";
             // 
             // tableLayoutPanel1
             // 
@@ -177,7 +183,7 @@
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.Controls.Add(this.grdProducts);
+            this.flowLayoutPanel3.Controls.Add(this.grdVendor);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(200, 38);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -195,11 +201,17 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.txtGst);
+            this.panel3.Controls.Add(this.txtEmail);
+            this.panel3.Controls.Add(this.txtMobileNumber);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lblname);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.txtType);
+            this.panel3.Controls.Add(this.txtName);
             this.panel3.Controls.Add(this.chkStatus);
-            this.panel3.Controls.Add(this.txtValue);
+            this.panel3.Controls.Add(this.txtAddress);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -234,15 +246,63 @@
             this.panel2.Size = new System.Drawing.Size(851, 61);
             this.panel2.TabIndex = 0;
             // 
-            // TaxComponent
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "MobileNumber";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Email";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "GST";
+            // 
+            // txtMobileNumber
+            // 
+            this.txtMobileNumber.Location = new System.Drawing.Point(75, 75);
+            this.txtMobileNumber.Name = "txtMobileNumber";
+            this.txtMobileNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtMobileNumber.TabIndex = 24;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(75, 109);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEmail.TabIndex = 25;
+            // 
+            // txtGst
+            // 
+            this.txtGst.Location = new System.Drawing.Point(75, 142);
+            this.txtGst.Name = "txtGst";
+            this.txtGst.Size = new System.Drawing.Size(100, 20);
+            this.txtGst.TabIndex = 26;
+            // 
+            // VendorComponent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "TaxComponent";
+            this.Name = "VendorComponent";
             this.Size = new System.Drawing.Size(1033, 485);
-            this.Load += new System.EventHandler(this.TaxComponent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grdProducts)).EndInit();
+            this.Load += new System.EventHandler(this.VendorComponent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.grdVendor)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -261,15 +321,15 @@
 
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView grdProducts;
+        private System.Windows.Forms.DataGridView grdVendor;
         private System.Windows.Forms.CheckBox chkStatus;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtValue;
-        private System.Windows.Forms.TextBox txtType;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -277,5 +337,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtGst;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtMobileNumber;
     }
 }

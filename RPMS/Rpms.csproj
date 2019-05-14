@@ -60,8 +60,22 @@
     <Compile Include="Components\DiscountCodeComponent.Designer.cs">
       <DependentUpon>DiscountCodeComponent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\StockInComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\StockInComponent.Designer.cs">
+      <DependentUpon>StockInComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\VendorComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\VendorComponent.Designer.cs">
+      <DependentUpon>VendorComponent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ProductTypeController.cs" />
     <Compile Include="Controllers\DiscountCodeController.cs" />
+    <Compile Include="Controllers\StockInController.cs" />
+    <Compile Include="Controllers\VendorController.cs" />
     <Compile Include="Menu\AdminMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\DiscountCodeComponent.resx">
       <DependentUpon>DiscountCodeComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\StockInComponent.resx">
+      <DependentUpon>StockInComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\VendorComponent.resx">
+      <DependentUpon>VendorComponent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
