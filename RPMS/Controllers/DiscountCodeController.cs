@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Rpms.Controllers
 {
@@ -15,7 +17,7 @@ namespace Rpms.Controllers
         private readonly IExcelRepository<DiscountCode> discountcodeRepository;
         public DiscountCodeController()
         {
-            discountcodeRepository = new ExcelRepository<DiscountCode>(ConfigurationManager.AppSettings["ExcelString"]);
+            discountcodeRepository = new ExcelRepository<DiscountCode>(Path.GetDirectoryName(Application.ExecutablePath) + "\\" + ConfigurationManager.AppSettings["ExcelString"]);
         }
 
         public DiscountCode Add(DiscountCode entity)

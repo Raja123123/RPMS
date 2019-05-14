@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Rpms.DataAccess;
 using Rpms.Models;
 
@@ -16,7 +18,7 @@ namespace Rpms.Controllers
         private readonly IExcelRepository<ProductType> productTypeRepository;
         public ProductTypeController()
         {
-            productTypeRepository = new ExcelRepository<ProductType>(ConfigurationManager.AppSettings["ExcelString"]);
+            productTypeRepository = new ExcelRepository<ProductType>(Path.GetDirectoryName(Application.ExecutablePath) + "\\" + ConfigurationManager.AppSettings["ExcelString"]);
         }
 
         public ProductType Add(ProductType entity)

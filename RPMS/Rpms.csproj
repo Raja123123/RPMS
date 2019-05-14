@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\ProductTaxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\ProductTaxForm.Designer.cs">
+      <DependentUpon>ProductTaxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ProductTypeComponent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Components\ProductTaxForm.resx">
+      <DependentUpon>ProductTaxForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\ProductTypeComponent.resx">
       <DependentUpon>ProductTypeComponent.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,7 +169,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Configuration.xlsx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,6 +187,9 @@
       <Project>{427CAEAD-3102-4AA7-B897-00266450A3A6}</Project>
       <Name>Rpms.DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

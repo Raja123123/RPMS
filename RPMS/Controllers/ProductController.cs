@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Rpms.Controllers
 {
@@ -15,7 +17,7 @@ namespace Rpms.Controllers
         private readonly IExcelRepository<Product> productRepository;
         public ProductController()
         {
-            productRepository = new ExcelRepository<Product>(ConfigurationManager.AppSettings["ExcelString"]);
+            productRepository = new ExcelRepository<Product>( Path.GetDirectoryName(Application.ExecutablePath) + "\\" + ConfigurationManager.AppSettings["ExcelString"]);
         }
 
         public Product Add(Product entity)
